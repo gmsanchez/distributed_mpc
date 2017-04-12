@@ -57,8 +57,8 @@ def create_robot_controller(idx,Delta,x0):
     Nt = 5
     x_sp = np.zeros((Nt+1,Nx))
     sp = dict(x=x_sp)
-    u_ub = np.array([1000, 1000])
-    u_lb = np.array([-1000, -1000])
+    u_ub = np.array([4, 1])
+    u_lb = np.array([-4, -1])
 
     commonargs = dict(
         verbosity=0,

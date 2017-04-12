@@ -199,6 +199,8 @@ for t in range(Nsim):
         _xk_husky[_j] = husky_rk4(_xk_husky[_j],_uk_husky[_j])
         X[t+1,_j*Nx] = _xk_husky[_j][0]
         X[t+1,_j*Nx+1] = _xk_husky[_j][1]
+        U[t,_j*Nu+0] = _uk_husky[_j][0]
+        U[t,_j*Nu+1] = _uk_husky[_j][1]
 #    
 #    X[t+1,:] = np.squeeze(controller.var["x",1])
 #    U[t,:] = np.squeeze(controller.var["u",0])
